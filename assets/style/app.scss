@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "sanitize.css";
+
+* {
+  transition: width,color,background 0.3s ease-in-out;
+}
+
+html.dark img {
+  filter: brightness(0.8);
+}
