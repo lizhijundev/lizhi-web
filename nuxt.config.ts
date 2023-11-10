@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   modules: [
     '@nuxtjs/robots',
     'nuxt-simple-sitemap',
@@ -8,15 +9,30 @@ export default defineNuxtConfig({
   ],
   app: {
     head: {
-      charset: 'utf-8',
-      viewport: 'width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no',
       title: 'My App',
+      htmlAttrs: {
+        lang: 'zh-CN'
+      },
       meta: [
-        { name: 'description', content: 'My amazing site.' }
+        { charset: 'utf-8' },
+        { name: 'description', content: 'My amazing site.' },
+        { name: 'viewport', content: 'width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' },
       ],
     }
   },
-  css: ['~/assets/style/app.scss'],
+  colorMode: {
+    storageKey: 'lzj-color-mode'
+  },
+  css: ['~/assets/style/app.css'],
+  // vite: {
+  //   css: {
+  //     preprocessorOptions: {
+  //       scss: {
+  //         additionalData: '@use "@/assets/app.scss" as *;'
+  //       }
+  //     }
+  //   }
+  // },
   runtimeConfig: {
     // The private keys which are only available server-side
     apiSecret: '123',
@@ -28,9 +44,8 @@ export default defineNuxtConfig({
   experimental: {
     writeEarlyHints: false,
   },
-  vite: {
-    server: {
-      host: '0.0.0.0'
-    }
+  devServer: {
+    host: '0.0.0.0',
+    port: 3001
   }
 })

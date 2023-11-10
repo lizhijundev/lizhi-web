@@ -1,12 +1,12 @@
 <template>
     <UButton
-        class="flex flex-col content-center justify-center items-center mr-2"
+        class="flex flex-row content-center items-center mr-2"
         color="white"
         square
         :ui="{
         color: {
           white: {
-            solid: 'bg-primary-200 hover:bg-primary-200 click:bg-primary-200 dark:bg-dark-800',
+            solid: 'ring-gray-400 click:bg-primary-200 dark:bg-dark-800',
             ghost: 'hover:bg-primary-200 dark:hover:bg-dark-800/50'
           }
         }

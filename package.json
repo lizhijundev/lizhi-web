@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --host 0.0.0.0",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@nuxt/ui": "^2.10.0",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "typed.js": "^2.0.16"
   }
 }

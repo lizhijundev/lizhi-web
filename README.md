@@ -3,11 +3,12 @@
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## 参考
-+ [icon](https://heroicons.com/)
-+ [tailwindcss](https://tailwindcss.com/)
-+ [nuxtjs](https://nuxtjs.org/)
-+ [nuxtui](https://ui.nuxt.com/getting-started/examples#color-mode-button)
-+ [UiColor](https://uicolors.app/create)
++ 圖標庫 [HeroIcon](https://heroicons.com/)
++ 圖標庫all [HeroIcon](https://icones.js.org/collection/heroicons)
++ CSS樣式文檔 [Tailwindcss](https://tailwindcss.com/)
++ Nuxt 3文檔 [NuxtJs](https://nuxtjs.org/)
++ UI組件庫 [NuxtUI](https://ui.nuxt.com/getting-started/examples#color-mode-button)
++ 配色生成 [UiColor](https://uicolors.app/create)
 
 ## Setup
 

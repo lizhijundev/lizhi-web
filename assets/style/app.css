@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+  font-family: 'JetBrainsFont';
+  src: url('/fonts/JetBrainsMono-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  transition: width,color,background 0.3s ease-in-out;
+}
+html.dark img{
+  filter: brightness(0.8);
+}
+body{
+  font-family: 'JetBrainsFont', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+
+  .text-color-brand {
+    @apply text-primary
+  }
+  .text-color-content {
+    @apply text-black
+  }
+  .text-color-primary {
+    color: rgba(22, 25, 27, 1);
+  }
+  .text-color-secondary {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .text-color-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+  .text-color-disabled {
+    color: rgba(0, 0, 0, 0.26);
+  }
+
+  html.dark {
+    .text-color-content {
+      @apply text-white
+    }
+    .text-color-primary {
+      color: rgba(205,225,255, 0.9);
+    }
+    .text-color-secondary {
+      color: rgba(205,225,255, 0.55);
+    }
+    .text-color-placeholder {
+      color: rgba(205,225,255, 0.35);
+    }
+    .text-color-disabled {
+      color: rgba(205,225,255, 0.22);
+    }
+  }
+
+}

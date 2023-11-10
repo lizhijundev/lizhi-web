@@ -5,6 +5,7 @@ export default {
   theme: {
     colors: {
       current: 'currentColor',
+      cool: colors.gray,
       blue: {
         '50': '#eff7ff',
         '100': '#daedff',
@@ -43,18 +44,18 @@ export default {
         '800': '#1f2533',
         '900': '#0e1118',
         '950': '#02060c',
-      },
-      gray: colors.gray,
+      }
     },
     extend: {
       colors: {
-        'transparent': 'transparent',
+        transparent: 'transparent',
+        current: 'currentColor',
         'black': '#02060c',
         'white': '#fff',
 
       },
       fontFamily: {
-        sans: ['Lato', 'PingFang SC', '宋体'],
+        sans: ['Lato', 'PingFangSC-Regular', '宋体'],
         serif: ['Merriweather', 'serif'],
       },
     },
