@@ -3,7 +3,7 @@
 </script>
 
 <template>
-<div class="w-full bg-white dark:bg-gray-950">
+<div class="w-full bg-base-300">
   <slot />
 </div>
 </template>

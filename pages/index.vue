@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import SuperCover from "~/components/app/SuperCover.vue";
-import ThemeToggle from "~/components/app/ThemeToggle.vue";
+import Navbar from "~/components/app/Navbar.vue";
+import SuperCover from "~/components/blog/index/SuperCover.vue";
 import BaseContainer from "~/components/app/BaseContainer.vue";
-import Avatar from "~/components/app/Avatar.vue";
-import LzjFooter from "~/components/app/LzjFooter.vue";
-import LzjTest from "~/components/app/LzjTest.vue";
+import Sidebar from '../components/blog/sidebar/Sidebar.vue'
 
 
 const siteTitle = ref('<lizhijun/>');
@@ -24,72 +22,25 @@ const cover = ref({
 function onNext() {
   console.log('onNext')
 }
+
 </script>
 
 <template>
-<div>
+<div class='scroll-smooth'>
+  <navbar class='navbar' />
   <super-cover :title="siteTitle" :cover-info='cover' :motto="motto" @onNext='onNext' />
-  <u-container class="p-0 mx-auto flex flex-col md:flex-row md:space-x-4" ui="bg-primary">
+  <div id='main-section' class="container mx-auto main-container flex flex-col md:flex-row">
     <!-- 侧边栏   -->
-    <div class="w-full md:w-1/4 min-w-[260px] sticky top-0 md:block">
-      <div class="md:sticky md:top-0 z-10">
-        <base-container class="shadow-md">
-          <div class="py-6 text-center bg-primary text-white dark:bg-gradient-to-tl dark:from-dark-900 dark:to-dark-800">
-            <h1 class="text-xl">Lizhijun.com.cn</h1>
-            <div class="text-sm mx-2.5">A Developer & Explorer</div>
-          </div>
-          <div class="hidden md:flex flex-col">
-            <div class="flex flex-row items-center px-5 py-3 cursor-pointer hover:bg-primary-200 hover:text-primary-800">
-              <i class="mr-2 i-heroicons-home-20-solid"></i>
-              <span class="text-sm">首页 / Home</span>
-            </div>
-            <div class="flex flex-row items-center px-5 py-3 cursor-pointer hover:bg-gray-200 hover:text-primary">
-              <i class="mr-2 i-heroicons-archive-box-20-solid"></i>
-              <span class="text-sm">归档 / Archives</span>
-            </div>
-            <div class="flex flex-row items-center px-5 py-3 cursor-pointer hover:bg-gray-200 hover:text-primary">
-              <i class="mr-2 i-heroicons-bookmark-square-20-solid"></i>
-              <span class="text-sm">分类 / Categories</span>
-            </div>
-            <div class="flex flex-row items-center px-5 py-3 cursor-pointer hover:bg-gray-200 hover:text-primary">
-              <i class="mr-2 i-heroicons-bookmark-20-solid"></i>
-              <span class="text-sm">标签 / Tags</span>
-            </div>
-
-            <nuxt-link to="/about" class="flex flex-row items-center px-5 py-3 cursor-pointer hover:bg-gray-200 hover:text-primary">
-              <i class="mr-2 i-heroicons-identification-20-solid"></i>
-              <span class="text-sm">关于 / Intro Myself</span>
-            </nuxt-link>
-          </div>
-        </base-container>
-
-        <base-container class="mt-2 px-5 py-3 shadow">
-          <avatar />
-        </base-container>
-
-
-        <base-container class="mt-2 px-5 py-3 shadow grid grid-cols-2">
-          <div class="flex items-center justify-center">
-            <theme-toggle class="flex-1" />
-          </div>
-          <div class="flex items-center justify-center">
-            <color-picker class="flex-1" />
-          </div>
-        </base-container>
-      </div>
-
-
+    <div class="w-full md:w-1/4 min-w-[300px]">
+      <sidebar />
     </div>
     <!-- 博客列表   -->
-    <div class="w-full md:w-3/4">
-      <base-container style="height: 2000px">
+    <div class='w-full md:w-3/4'>
+      <base-container class="p-base" style="height: 2000px">
         <div class="text-lg text-primary">文章列表</div>
-        <u-button>按鈕</u-button>
-        <lzj-test />
       </base-container>
     </div>
-  </u-container>
-  <lzj-footer />
+  </div>
 </div>
 </template>
 

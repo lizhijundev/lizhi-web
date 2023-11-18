@@ -23,14 +23,18 @@ body{
   -webkit-font-smoothing: antialiased;
 }
 
-@layer base {
 
-  .text-color-brand {
-    @apply text-primary
+@layer base {
+  :root {
+    --padding: 10px;
   }
-  .text-color-content {
-    @apply text-black
-  }
+  h1 { @apply text-2xl; }
+  h2 { @apply text-xl; }
+  h3 { @apply text-lg; }
+  a:hover { @apply text-primary; }
+
+  .text-color-brand { @apply text-primary }
+  .text-color-content { @apply text-black }
   .text-color-primary {
     color: rgba(22, 25, 27, 1);
   }
@@ -45,11 +49,10 @@ body{
   }
 
   html.dark {
-    .text-color-content {
-      @apply text-white
-    }
+    .text-color-brand { @apply text-primary-content }
+    .text-color-content { color: rgba(205,225,255, 0.9); }
     .text-color-primary {
-      color: rgba(205,225,255, 0.9);
+      color: rgba(205,225,255, 1);
     }
     .text-color-secondary {
       color: rgba(205,225,255, 0.55);
@@ -62,4 +65,30 @@ body{
     }
   }
 
+}
+
+
+@layer components {
+  .flex-row-xy-center {
+    @apply flex flex-row justify-center items-center;
+  }
+  .flex-row-y-center {
+    @apply flex flex-row items-center;
+  }
+
+  /*导航和主体内容相邻则设置上边距*/
+  .navbar + .main-container {
+    @apply p-0;
+    margin-top: calc(4rem + var(--padding));
+  }
+  .navbar ~ .main-container{
+    .sidebar {
+      @apply sticky;
+      top: calc(4rem + var(--padding));
+    }
+  }
+
+  .navbar + .lzj-page {
+    padding-top: calc(4rem + 10px);
+  }
 }

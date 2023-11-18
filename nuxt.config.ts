@@ -3,10 +3,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    '@nuxtjs/robots',
+    '@vueuse/nuxt',
+    'nuxt-icon',
     'nuxt-simple-sitemap',
-    '@nuxt/ui'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/device'
   ],
+  // @ts-ignore
   app: {
     head: {
       title: 'My App',
@@ -20,19 +24,20 @@ export default defineNuxtConfig({
       ],
     }
   },
+  plugins: [{
+    src: '~/plugins/scroller.js',
+    mode: 'client',
+  }],
   colorMode: {
+    preference: 'system', // default theme
+    dataValue: 'theme', // activate data-theme in <html> tag
+    classSuffix: '',
     storageKey: 'lzj-color-mode'
   },
-  css: ['~/assets/style/app.css'],
-  // vite: {
-  //   css: {
-  //     preprocessorOptions: {
-  //       scss: {
-  //         additionalData: '@use "@/assets/app.scss" as *;'
-  //       }
-  //     }
-  //   }
-  // },
+  css: ['~/assets/style/app.scss'],
+  tailwindcss: {
+    exposeConfig: true
+  },
   runtimeConfig: {
     // The private keys which are only available server-side
     apiSecret: '123',

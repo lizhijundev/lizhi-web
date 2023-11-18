@@ -1,14 +1,13 @@
 <template>
-  <div>
+  <!-- tabindex Dealing with CSS :focus selector on iOS Safari  -->
+  <!-- https://serko.dev/post/dealing-with-css-focus-selector-on-ios-safari/ -->
+  <NuxtLayout tabindex="0">
     <NuxtPage/>
-  </div>
+  </NuxtLayout>
 </template>
 
-<script setup>
-const runtimeConfig = useRuntimeConfig()
-const appConfig = useAppConfig()
-console.log('runtimeConfig', runtimeConfig)
-console.log('appConfig', appConfig)
+<script lang='ts' setup>
+
 </script>
 
 <style>

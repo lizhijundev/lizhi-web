@@ -3,10 +3,15 @@
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## 参考
++ [Icon组件](https://nuxt.com/modules/icon)
 + 圖標庫 [HeroIcon](https://heroicons.com/)
 + 圖標庫all [HeroIcon](https://icones.js.org/collection/heroicons)
 + CSS樣式文檔 [Tailwindcss](https://tailwindcss.com/)
 + Nuxt 3文檔 [NuxtJs](https://nuxtjs.org/)
++ [DaisyUI](https://daisyui.com/docs/themes/)
++ [Vueuse](https://vueuse.org/guide/components.html)
+
+
 + UI組件庫 [NuxtUI](https://ui.nuxt.com/getting-started/examples#color-mode-button)
 + 配色生成 [UiColor](https://uicolors.app/create)
 
