@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     'nuxt-simple-sitemap',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
-    '@nuxtjs/device'
+    '@nuxtjs/device',
+    '@ant-design-vue/nuxt'
   ],
   // @ts-ignore
   app: {
@@ -22,7 +23,24 @@ export default defineNuxtConfig({
         { name: 'description', content: 'My amazing site.' },
         { name: 'viewport', content: 'width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' },
       ],
+      link:[
+        { rel: 'stylesheet', href:"/css/antd.css" }
+      ]
     }
+  },
+  css: [
+    'ant-design-vue/dist/reset.css',
+  ],
+
+  vite: {
+    resolve: {
+      alias: {
+        'ant-design-vue/dist': 'ant-design-vue/dist',
+        'ant-design-vue/es': 'ant-design-vue/es',
+        'ant-design-vue/lib': 'ant-design-vue/es',
+        'ant-design-vue': 'ant-design-vue/es',
+      },
+    },
   },
   plugins: [{
     src: '~/plugins/scroller.js',

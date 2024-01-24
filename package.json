@@ -6,9 +6,11 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "gen:css": "esno scripts/genAntdStyle.ts"
   },
   "devDependencies": {
+    "@ant-design-vue/nuxt": "^1.2.0",
     "@nuxt/devtools": "latest",
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/device": "^3.1.1",
@@ -17,6 +19,8 @@
     "@vueuse/core": "^10.6.1",
     "@vueuse/nuxt": "^10.6.1",
     "daisyui": "^4.0.7",
+    "esno": "^4.0.0",
+    "fs-extra": "^11.1.1",
     "nuxt": "^3.8.1",
     "nuxt-icon": "^0.6.6",
     "nuxt-simple-sitemap": "^3.4.1",

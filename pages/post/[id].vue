@@ -8,6 +8,10 @@ useHead({
   ]
 })
 
+definePageMeta({
+  middleware: ['article-access']
+})
+
 
 
 </script>

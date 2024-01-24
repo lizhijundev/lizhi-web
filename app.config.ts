@@ -7,6 +7,7 @@ export default defineAppConfig({
         { name:'tags', title: '标签', url: '', icon: 'i-heroicons-bookmark-20-solid' },
         { name:'about', title:'关于', url: '/about', icon: 'i-heroicons-identification-20-solid' },
         { name:'dev', title:'开发测试', url: '/dev', icon: 'i-heroicons-wrench-20-solid' },
+        { name:'watermark', title:'图片水印', url: '/tools/watermark', icon: 'i-heroicons-wrench-20-solid' },
     ],
     linkNav: [
         { name:'github', title:'Github', url: '', icon: 'i-uil-github' },

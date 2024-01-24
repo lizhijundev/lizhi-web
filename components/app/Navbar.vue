@@ -13,15 +13,15 @@ const onScroll = useDebounceFn(() => {
   // do something
   displayY.value = window.pageYOffset || document.documentElement.scrollTop
   isScrollTop.value = displayY.value === 0
-  console.log(isScrollTop.value, displayY.value)
+  // console.log(isScrollTop.value, displayY.value)
 }, 10)
 
 onMounted(() => {
-  console.log(`the component is now mounted.`)
   window.addEventListener('scroll', onScroll);
+
+
 })
 onUnmounted(() => {
-  console.log(`the component is now onUnmounted.`)
   window.removeEventListener('scroll', onScroll);
 })
 
