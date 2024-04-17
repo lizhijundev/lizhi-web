@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref } from '@vue/reactivity'
 
-definePageMeta({
-  layout: 'blog'
-})
+// definePageMeta({
+//   layout: 'blog'
+// })
 
 const selectedImage = ref(null)
 const canvasRef = ref(null)
@@ -58,6 +58,7 @@ const handleMessage = () => {
   <div class='text-2xl pb-6'>图片水印</div>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-3">
     <div>
+      <a-button />
       <a-button type="primary" @click="handleMessage">Primary Button</a-button>
       <button class="btn btn-primary" @click="handleButtonClick">选择图片</button>
 

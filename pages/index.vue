@@ -3,7 +3,7 @@ import Navbar from "~/components/app/Navbar.vue";
 import SuperCover from "~/components/blog/index/SuperCover.vue";
 import BaseContainer from "~/components/app/BaseContainer.vue";
 import Sidebar from '../components/blog/sidebar/Sidebar.vue'
-
+const { locale, setLocale } = useI18n()
 
 const siteTitle = ref('<lizhijun/>');
 
@@ -38,6 +38,11 @@ function onNext() {
     <div class='w-full md:w-3/4'>
       <base-container class="p-base" style="height: 2000px">
         <div class="text-lg text-primary">文章列表</div>
+
+        <button @click="setLocale('en')">en</button>
+        <button @click="setLocale('fr')">fr</button>
+        <button @click="setLocale('zh')">zh</button>
+        <p>{{ $t('welcome') }}</p>
       </base-container>
     </div>
   </div>

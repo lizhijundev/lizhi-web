@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@nuxtjs/device',
-    '@ant-design-vue/nuxt'
+    '@ant-design-vue/nuxt',
+    "@nuxtjs/i18n"
   ],
   // @ts-ignore
   app: {
@@ -27,6 +28,10 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href:"/css/antd.css" }
       ]
     }
+  },
+  // @ts-ignore
+  i18n: {
+    vueI18n: './i18n/index.ts'
   },
   css: [
     'ant-design-vue/dist/reset.css',
@@ -52,6 +57,7 @@ export default defineNuxtConfig({
     classSuffix: '',
     storageKey: 'lzj-color-mode'
   },
+  // @ts-ignore
   css: ['~/assets/style/app.scss'],
   tailwindcss: {
     exposeConfig: true
